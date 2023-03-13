@@ -1,0 +1,28 @@
+{
+    "manifest_version":3,
+    "name": "wake up kid",
+    "version": "0.1",
+
+    "action": {
+        "default_title": "Do we need a description eh?",
+        "default_popup": "popup.html"
+        
+      },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+        "js": [
+                "content.js"
+              ],
+          "matches": ["<all_urls>"]
+        }
+      ],
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab",
+        "nativeMessaging"
+      ]
+}
