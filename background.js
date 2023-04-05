@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:3000');
+const socket = new WebSocket('wss://kunai-msan.onrender.com');
 
 socket.addEventListener('open', function (event) {
     console.log('Connected to WS Server');
@@ -27,5 +27,4 @@ chrome.runtime.onMessage.addListener(function(request,sender,sendResponse)
         })
 
     })
-
 
